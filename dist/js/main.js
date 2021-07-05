@@ -2,7 +2,7 @@
 /*!*************************************!*\
   !*** ./app/js/components/burger.js ***!
   \*************************************/
-/*! no static exports found */function(module,exports){eval("document.querySelector('.burger').addEventListener('click', function () {\n  document.querySelector('.burger').classList.toggle('burger_active');\n  document.querySelector('.mobile-nav').classList.toggle('mobile-nav_active');\n});\ndocument.querySelector('.mobile-nav').addEventListener('click', function (e) {\n  if (e.target.classList.contains('mobile-nav__link')) {\n    document.querySelector('.burger').classList.remove('burger_active');\n    document.querySelector('.mobile-nav').classList.remove('mobile-nav_active');\n  }\n});\n\n//# sourceURL=webpack:///./app/js/components/burger.js?")},"./app/js/components/scroll.js":
+/*! no static exports found */function(module,exports){eval("document.querySelector('.burger').addEventListener('click', function () {\n  document.querySelector('.burger').classList.toggle('burger_active');\n  document.querySelector('.nav').classList.toggle('nav_active');\n});\ndocument.querySelector('.nav').addEventListener('click', function (e) {\n  if (e.target.classList.contains('nav__link')) {\n    document.querySelector('.burger').classList.remove('burger_active');\n    document.querySelector('.nav').classList.remove('nav_active');\n  }\n});\n\n//# sourceURL=webpack:///./app/js/components/burger.js?")},"./app/js/components/scroll.js":
 /*!*************************************!*\
   !*** ./app/js/components/scroll.js ***!
   \*************************************/

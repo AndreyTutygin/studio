@@ -153,7 +153,6 @@ const pug2html = () => {
     }).on("error", notify.onError()))
     .pipe(webphtml())
     .pipe(htmlValidator())
-    .pipe(htmlValidator.reporter())
     .pipe(bemValidator())
     .pipe(dest('./dist'))
     .pipe(browserSync.stream());

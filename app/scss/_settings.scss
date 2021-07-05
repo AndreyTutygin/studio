@@ -13,9 +13,10 @@ body {
     min-width: 320px;
     font-family: $mainFont;
     font-size: 16px;
+    line-height: 25px;
     color: $paragColor;
 
-    @include media(650) {
+    @include media(768) {
         font-size: 14px;
     }
 }
