@@ -1,5 +1,6 @@
 .specialization {
     position: relative;
+    padding-bottom: 85px;
 
     &__head {
         display: flex;
@@ -24,6 +25,8 @@
         flex-flow: row wrap;
         justify-content: center;
         margin-top: 52px;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 85px;
         gap: 30px;
     }
 
@@ -36,10 +39,21 @@
             border-radius: 10px;
             width: 350px;
             height: 300px;
-            background-image: url("./../img/specialization__img.png");
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
+
+            &_one {
+                background-image: url("./../img/specialization__img.jpg");
+            }
+
+            &_two {
+                background-image: url("./../img/specialization__img2.jpg");
+            }
+
+            &_three {
+                background-image: url("./../img/specialization__img3.jpg");
+            }
 
             @include media(768) {
                 width: 250px;
