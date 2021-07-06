@@ -2,6 +2,18 @@
     position: relative;
     padding-bottom: 85px;
 
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 490px;
+        background: linear-gradient(90deg, #504dc2 20.44%, #5f12d0 80.91%), #c4c4c4;
+
+        @include media(768) {
+            height: 400px;
+        }
+    }
+
     &__head {
         display: flex;
         align-items: center;
@@ -91,17 +103,5 @@
 
     @include media(768) {
         text-align: center;
-    }
-}
-
-.bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 490px;
-    background: linear-gradient(90deg, #504dc2 20.44%, #5f12d0 80.91%), #c4c4c4;
-
-    @include media(768) {
-        height: 400px;
     }
 }

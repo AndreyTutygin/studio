@@ -1,2 +1,6 @@
 section.video
-    h2.section-title.section-title__video Видео о нашей работе
+    .container.video__container
+        h2.section-title.video__section-title Видео о нашей работе
+        p.video__txt Просто посмотрите, как мы работаем
+        video.video-js.vjs-theme-sea#video-1(width="970" controls)
+            source(src="./resources/video.mp4" type="video/mp4")
