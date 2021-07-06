@@ -1,1 +1,93 @@
-//
+.specialization {
+    position: relative;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 100px;
+
+        @include media(768) {
+            flex-direction: column;
+            padding-top: 50px;
+            gap: 20px;
+        }
+    }
+
+    &__section-title {
+        max-width: 540px;
+        color: #fff;
+    }
+
+    &__items {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 52px;
+        gap: 30px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+
+        &__img {
+            border-radius: 10px;
+            width: 350px;
+            height: 300px;
+            background-image: url("./../img/specialization__img.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @include media(768) {
+                width: 250px;
+                height: 200px;
+            }
+        }
+
+        &__title {
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+
+            &_blue {
+                color: $mainColor;
+            }
+        }
+
+        &__txt {
+            margin-top: 23px;
+        }
+
+        &__link {
+            display: inline-block;
+            margin-top: 21px;
+            text-decoration: underline;
+            color: $mainColor;
+        }
+
+        @include media(1149) {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    @include media(768) {
+        text-align: center;
+    }
+}
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 490px;
+    background: linear-gradient(90deg, #504dc2 20.44%, #5f12d0 80.91%), #c4c4c4;
+
+    @include media(768) {
+        height: 400px;
+    }
+}
