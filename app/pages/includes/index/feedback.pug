@@ -1,2 +1,8 @@
 section.feedback
-    h3.feedback__title Подпишитесь на нашу рассылку
+    .container.feedback__container
+        h3.feedback__title Подпишитесь на нашу рассылку
+        p.feedback__txt Полезные статьи, акции, новости - получите все это сейчас!
+        form.feedback__form(action="#")
+            input.field-email(type="email" placeholder="Ваш email")
+            button.btn-reset.btn.feedback__btn Подписаться
+        p.feedback__txt Мы не шлем спам, и передаем никому ваши данные.
