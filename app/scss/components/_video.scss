@@ -1,9 +1,9 @@
 .video {
     position: relative;
-    padding: 70px 0 490px;
+    padding: 70px 0 412px;
     text-align: center;
     color: #fff;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("./../img/video__img.jpg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("./../img/video__img.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,9 +17,36 @@
     &__section-title {
         color: #fff;
     }
+
+    &__txt {
+        margin-top: 9px;
+    }
+
+    @include media(768) {
+        padding: 50px 0 165px;
+    }
 }
 
 .video-js {
     position: absolute;
     top: 220px;
+
+    @include media(768) {
+        top: 160px;
+    }
+}
+
+.video-1-dimensions {
+    border-radius: 10px;
+    width: 763px;
+    height: 429px;
+
+    @include media(768) {
+        width: 320px;
+        height: 180px;
+    }
+}
+
+.video-js .vjs-tech {
+    border-radius: 10px;
 }
