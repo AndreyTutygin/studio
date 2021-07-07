@@ -19,7 +19,7 @@
         padding: 0;
         width: 18px;
         height: 2px;
-        background-color: #000;
+        background-color: $mainColor;
         transition: all 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 
         &:nth-child(1) {
