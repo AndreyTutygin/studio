@@ -61,7 +61,24 @@
         gap: 50px;
 
         @include media(423) {
-            margin-top: 30px;
+            margin-top: 50px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        gap: 5px 15px;
+
+        &__txt {
+            color: #999;
+        }
+
+        @include media(768) {
+            max-width: 100px;
         }
     }
 
@@ -80,18 +97,5 @@
 
     @include media(768) {
         padding: 50px 0;
-    }
-}
-
-.aboutUs-item {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    max-width: 150px;
-    gap: 5px 15px;
-
-    &__txt {
-        color: #999;
     }
 }

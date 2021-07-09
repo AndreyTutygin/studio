@@ -10,6 +10,7 @@
     width: 40px;
     height: 40px;
     background-color: #f5f6f7;
+    transition: ease 0.4s;
     cursor: pointer;
 
     &__line {
@@ -79,6 +80,10 @@
                 background-color: transparent;
             }
         }
+    }
+
+    &--scrolled {
+        height: 40px;
     }
 
     @include media(768) {

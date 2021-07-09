@@ -52,6 +52,8 @@
   },
   "dependencies": {
     "@videojs/themes": "^1.0.1",
-    "normalize.css": "^8.0.1"
+    "gsap": "^3.7.0",
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.7.5"
   }
 }

@@ -40,6 +40,19 @@
         border-bottom: 1px solid #e0e0e0;
         padding-bottom: 85px;
         gap: 30px;
+
+        &-swiper-wrap {
+            display: none;
+            margin-top: 52px;
+
+            @include media(768) {
+                display: block;
+            }
+        }
+
+        @include media(768) {
+            display: none;
+        }
     }
 
     &-item {
@@ -101,7 +114,12 @@
         }
     }
 
+    &__swiper-container-pagination {
+        bottom: 23px;
+    }
+
     @include media(768) {
+        padding-bottom: 50px;
         text-align: center;
     }
 }

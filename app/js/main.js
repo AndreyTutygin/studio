@@ -1,10 +1,30 @@
+import videojs from 'video.js';
+import Swiper from 'swiper/bundle';
+
 import './components/burger';
 import './components/scroll';
 import './components/testWebP';
-// import './../../node_modules/video.js/dist/lang/ru.js';
-// require('./../../node_modules/video.js/dist/lang/ru.js');
+import './components/animation';
 
-import videojs from 'video.js';
+const swiper = new Swiper(".portfolio__images-swiper", {
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 10,
+});
+
+const swiper2 = new Swiper(".specialization__items-swiper", {
+    pagination: {
+        el: ".swiper-pagination-2",
+        clickable: true,
+    },
+    grabCursor: true,
+    loop: true,
+    spaceBetween: 10,
+});
 
 videojs.addLanguage('ru', {
     "Audio Player": "Аудио проигрыватель",
