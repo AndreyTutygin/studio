@@ -14,11 +14,14 @@
         color: #fff;
     }
 
-    &__txt {
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
         line-height: 20px;
+        color: #fff;
     }
 
-    &__title {
+    &__txt {
         margin: 20px 0 34px;
         font-weight: 800;
         font-size: 48px;

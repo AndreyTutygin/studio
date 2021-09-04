@@ -5,22 +5,34 @@ section.portfolio#portfolio
             p.portfolio__txt.gs_reveal Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
 
         .portfolio__images.gs_reveal
-            img.portfolio__img(src="./img/portfolio__img.png" alt="Скрин проекта")
-            img.portfolio__img(src="./img/portfolio__img2.png" alt="Скрин проекта")
-            img.portfolio__img(src="./img/portfolio__img3.png" alt="Скрин проекта")
-            img.portfolio__img(src="./img/portfolio__img4.png" alt="Скрин проекта")
+            a.portfolio__img_big(data-fslightbox="gallary" href="./img/portfolio__img_big.jpg")
+                figure.portfolio__img-wrap
+                    img.portfolio__img(src="./img/portfolio__img.png" alt="Скрин проекта")
+            a.portfolio__img_big(data-fslightbox="gallary" href="./img/portfolio__img2_big.jpg")
+                figure.portfolio__img-wrap
+                    img.portfolio__img(src="./img/portfolio__img2.jpg" alt="Скрин проекта")
+            a.portfolio__img_big(data-fslightbox="gallary" href="./img/portfolio__img3_big.jpg")
+                figure.portfolio__img-wrap
+                    img.portfolio__img(src="./img/portfolio__img3.jpg" alt="Скрин проекта")
+            a.portfolio__img_big(data-fslightbox="gallary" href="./img/portfolio__img4_big.jpg")
+                figure.portfolio__img-wrap
+                    img.portfolio__img(src="./img/portfolio__img4.png" alt="Скрин проекта")
 
         .portfolio__images-swiper-wrap.gs_reveal
             .portfolio__images-swiper.swiper-container
                 .swiper-wrapper
                     .swiper-slide
-                        img.portfolio__img(src="./img/portfolio__img.png" alt="Скрин проекта")
+                        a.portfolio__img_big(data-fslightbox="gallary2" href="./img/portfolio__img_big.jpg") 
+                            img.portfolio__img(src="./img/portfolio__img.png" alt="Скрин проекта")
                     .swiper-slide
-                        img.portfolio__img(src="./img/portfolio__img2.png" alt="Скрин проекта")
+                        a.portfolio__img_big(data-fslightbox="gallary2" href="./img/portfolio__img2_big.jpg") 
+                            img.portfolio__img(src="./img/portfolio__img2.jpg" alt="Скрин проекта")
                     .swiper-slide
-                        img.portfolio__img(src="./img/portfolio__img3.png" alt="Скрин проекта")
+                        a.portfolio__img_big(data-fslightbox="gallary2" href="./img/portfolio__img3_big.jpg") 
+                            img.portfolio__img(src="./img/portfolio__img3.jpg" alt="Скрин проекта")
                     .swiper-slide
-                        img.portfolio__img(src="./img/portfolio__img4.png" alt="Скрин проекта")
+                        a.portfolio__img_big(data-fslightbox="gallary2" href="./img/portfolio__img4_big.jpg") 
+                            img.portfolio__img(src="./img/portfolio__img4.png" alt="Скрин проекта")
             .swiper-container.pagination-container
                 .swiper-pagination.portfolio__swiper-pagination
 

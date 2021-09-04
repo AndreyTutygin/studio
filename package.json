@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@videojs/themes": "^1.0.1",
+    "fslightbox": "^3.3.0-2",
     "gsap": "^3.7.0",
     "normalize.css": "^8.0.1",
     "swiper": "^6.7.5"

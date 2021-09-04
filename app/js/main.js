@@ -1,8 +1,11 @@
 import videojs from 'video.js';
 import Swiper from 'swiper/bundle';
+require('fslightbox');
 
 import './components/burger';
+import './components/preloader';
 import './components/scroll';
+import './components/scroll-up';
 import './components/testWebP';
 import './components/animation';
 
