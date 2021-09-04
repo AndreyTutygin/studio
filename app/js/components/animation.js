@@ -47,7 +47,7 @@ function hideTo(elem) {
         },
         duration: 1,
         opacity: 0,
-        y: -90
+        y: -80
     });
 }
 
