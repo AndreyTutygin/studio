@@ -44,16 +44,13 @@
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
-    "video.js": "^7.13.3",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "^2.2.3",
     "webpack": "^5.42.0",
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {
-    "@videojs/themes": "^1.0.1",
     "fslightbox": "^3.3.0-2",
-    "gsap": "^3.7.0",
     "normalize.css": "^8.0.1",
     "swiper": "^6.7.5"
   }

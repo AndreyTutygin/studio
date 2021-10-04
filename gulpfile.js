@@ -180,6 +180,25 @@ const styles = () => {
         .pipe(browserSync.stream());
 }
 
+const stylesBuild = () => {
+    return src('./app/scss/**/*.scss')
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }).on("error", notify.onError()))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(groupMedia())
+        .pipe(autoprefixer({
+            cascade: false,
+        }))
+        .pipe(cleanCSS({
+            level: 2
+        }))
+        .pipe(webpCss())
+        .pipe(dest('./dist/css/'))
+}
+
 const scripts = () => {
     return src('./app/js/main.js')
         .pipe(webpackStream({
@@ -212,6 +231,35 @@ const scripts = () => {
         .pipe(browserSync.stream());
 }
 
+const scriptsBuild = () => {
+    return src('./app/js/main.js')
+        .pipe(webpackStream({
+            mode: 'development',
+            output: {
+                filename: 'main.js',
+            },
+            module: {
+                rules: [{
+                    test: /\.m?js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    use: {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['@babel/preset-env']
+                        }
+                    }
+                }]
+            },
+        }))
+        .on('error', function (err) {
+            console.error('WEBPACK ERROR', err);
+            this.emit('end'); // Don't stop the rest of the task
+        })
+
+        .pipe(uglify().on("error", notify.onError()))
+        .pipe(dest('./dist/js'))
+}
+
 const watchFiles = () => {
     browserSync.init({
         server: { baseDir: "./dist" },
@@ -235,11 +283,13 @@ const clean = () => {
 
 exports.pug2html    = pug2html;
 exports.styles      = styles;
+exports.stylesBuild      = stylesBuild;
 exports.scripts     = scripts;
+exports.scriptsBuild     = scriptsBuild;
 exports.img         = img;
 exports.watchFiles  = watchFiles;
 exports.fonts       = fonts;
 exports.fontsStyle  = fontsStyle;
 
 exports.default = series(clean, parallel(pug2html, scripts, fonts, resources, img, svgSprites, favicons), fontsStyle, styles, watchFiles);
-
+exports.build = series(clean, parallel(pug2html, scriptsBuild, fonts, resources, img, svgSprites, favicons), fontsStyle, stylesBuild);

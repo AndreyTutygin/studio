@@ -1,6 +1,10 @@
-section.video.gs_reveal.gs_reveal_fromLeft
+section.video
     .container.video__container
-        h2.section-title.video__section-title.gs_reveal Видео о нашей работе
-        p.video__txt.gs_reveal Просто посмотрите, как мы работаем
-        video.video-js.vjs-theme-sea#video-1(controls)
-            source(src="./resources/video.mp4" type="video/mp4")
+        h2.section-title.video__section-title Видео о нашей работе
+        p.video__txt Просто посмотрите, как мы работаем
+        .video__prew
+            a.video-play(data-fslightbox="video" href="./resources/video.webm")
+                .video-play__icon
+                    svg.video-play__svg
+                        use(xlink:href='img/sprite.svg#play-btn')
+                |Смотреть видео
